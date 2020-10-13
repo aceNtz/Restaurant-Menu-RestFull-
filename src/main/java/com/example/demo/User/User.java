@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "users")
 public class User {
 
     @Id
@@ -35,7 +35,10 @@ public class User {
     private String dateJoined;
 
     @Column
-    private Role role;
+    private boolean enabled;
+
+    @Column
+    private RoleEnum role;
 
 
 
@@ -46,7 +49,7 @@ public class User {
     public User(String password, String name,
                 String surname, String email,
                 String phone, String about,
-                String dateJoined, Role role) {
+                String dateJoined, RoleEnum role, boolean enabled) {
         this.password = password;
         this.name = name;
         this.surname = surname;
@@ -55,6 +58,7 @@ public class User {
         this.about = about;
         this.dateJoined = dateJoined;
         this.role = role;
+        this.enabled = enabled;
     }
 
 
@@ -123,11 +127,19 @@ public class User {
         this.dateJoined = dateJoined;
     }
 
-    public Role getRole() {
+    public RoleEnum getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(RoleEnum role) {
         this.role = role;
+    }
+
+    public boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }

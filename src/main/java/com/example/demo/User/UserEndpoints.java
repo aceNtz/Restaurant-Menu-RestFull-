@@ -1,8 +1,8 @@
-package com.example.demo.Meal;
+package com.example.demo.User;
 
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MealController {
+public class UserEndpoints {
 
 }

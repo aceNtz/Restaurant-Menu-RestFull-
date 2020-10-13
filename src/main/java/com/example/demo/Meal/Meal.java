@@ -1,5 +1,7 @@
 package com.example.demo.Meal;
 
+import com.example.demo.Recipe.Recipe;
+
 import javax.persistence.*;
 
 @Entity

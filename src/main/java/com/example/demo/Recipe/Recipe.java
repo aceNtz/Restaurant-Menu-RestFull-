@@ -1,4 +1,4 @@
-package com.example.demo.Meal;
+package com.example.demo.Recipe;
 
 import javax.persistence.*;
 
